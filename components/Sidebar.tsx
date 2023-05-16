@@ -1,4 +1,3 @@
-import logo from '@/assets/images/logo.png';
 import { LinkType } from '@/types';
 import Image from 'next/image';
 import { FC } from 'react';
@@ -24,7 +23,7 @@ const Sidebar: FC = () => {
   return (
     <Card className='h-full w-40 flex items-center justify-between flex-wrap'>
       <div className='w-full flex justify-center items-center'>
-        <Image src={logo} alt='Able logo' priority className='w-14' />
+        <Image src='logo' alt='Able logo' priority className='w-14' />
       </div>
       {links.map((link, index) => (
         <SidebarLink key={index} link={link} />

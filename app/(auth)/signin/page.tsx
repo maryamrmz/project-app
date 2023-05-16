@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { AuthForm } from '@/components';
 
-const Signin: FC = () => {
-  return <div>Sign In</div>;
+const Signin = () => {
+  return <AuthForm mode='signin' />;
 };
 
 export default Signin;
