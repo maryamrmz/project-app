@@ -1,8 +1,6 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
 }
 
 datasource db {
@@ -11,10 +9,9 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(uuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
+  id        String    @id @default(uuid())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
   email     String    @unique
   firstName String
   lastName  String
@@ -24,45 +21,40 @@ model User {
 }
 
 model Project {
-  id        String   @id @default(uuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  name    String
-  ownerId String
-  owner   User   @relation(fields: [ownerId], references: [id])
-
+  id          String    @id @default(uuid())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  name        String
+  ownerId     String
   description String?
   due         DateTime?
-  deleted     Boolean @default(false)
+  deleted     Boolean   @default(false)
+  owner       User      @relation(fields: [ownerId], references: [id])
   tasks       Task[]
 
   @@unique([ownerId, name])
   @@index([ownerId, id])
 }
 
+model Task {
+  id          String      @id @default(uuid())
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  ownerId     String
+  projectId   String
+  status      TASK_STATUS @default(NOT_STARTED)
+  name        String
+  description String?
+  due         DateTime?
+  deleted     Boolean     @default(false)
+  owner       User        @relation(fields: [ownerId], references: [id])
+  project     Project     @relation(fields: [projectId], references: [id])
+
+  @@index([ownerId])
+}
+
 enum TASK_STATUS {
   NOT_STARTED
   STARTED
   COMPLETED
-}
-
-model Task {
-  id        String   @id @default(uuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  ownerId String
-  owner   User   @relation(fields: [ownerId], references: [id])
-  projectId String
-  project   Project @relation(fields: [projectId], references: [id])
-
-  status      TASK_STATUS @default(NOT_STARTED)
-  name        String
-
-  description String?
-  due     DateTime?
-  deleted Boolean   @default(false)
-
-  @@index([ownerId])
 }
