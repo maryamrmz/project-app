@@ -1,5 +1,5 @@
 import { GlassPane } from '@/components';
-import '@/styles/global.css';
+import '@/styles/globals.css';
 import { FC, ReactNode } from 'react';
 
 interface DashboardRootLayoutProps {
