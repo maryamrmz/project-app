@@ -1,5 +1,5 @@
-import { db } from '@/lib/db';
-import { TASK_STATUS } from '@prisma/client';
+import { db } from "@/lib/db";
+import { TASK_STATUS } from "@prisma/client";
 
 const getRandomTaskStatus = () => {
   const statuses = [
@@ -12,13 +12,13 @@ const getRandomTaskStatus = () => {
 
 async function main() {
   const user = await db.user.upsert({
-    where: { email: 'user@email.com' },
+    where: { email: "user@email.com" },
     update: {},
     create: {
-      email: 'user@email.com',
-      firstName: 'User',
-      lastName: 'Person',
-      password: await 'password',
+      email: "user@email.com",
+      firstName: "User",
+      lastName: "Person",
+      password: await "password",
       projects: {
         create: new Array(5).fill(1).map((_, i) => ({
           name: `Project ${i}`,

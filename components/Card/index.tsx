@@ -1,5 +1,5 @@
-import clsx from 'clsx';
-import { FC, ReactNode } from 'react';
+import clsx from "clsx";
+import { FC, ReactNode } from "react";
 
 interface CardProps {
   className?: string;
@@ -10,7 +10,7 @@ const Card: FC<CardProps> = ({ className, children }) => {
   return (
     <div
       className={clsx(
-        'rounded-3xl px-10 py-4 drop-shadow-xl bg-white',
+        "rounded-3xl px-10 py-4 drop-shadow-xl bg-white",
         className
       )}
     >

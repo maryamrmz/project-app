@@ -1,29 +1,29 @@
-import { LinkType } from '@/types';
-import Image from 'next/image';
-import { FC } from 'react';
-import Card from './Card';
-import SidebarLink from './SidebarLink';
+import { LinkType } from "@/types";
+import Image from "next/image";
+import { FC } from "react";
+import Card from "./Card";
+import SidebarLink from "./SidebarLink";
 
 const links: LinkType[] = [
-  { label: 'Home', icon: 'Grid', link: '/home' },
+  { label: "Home", icon: "Grid", link: "/home" },
   {
-    label: 'Calendar',
-    icon: 'Calendar',
-    link: '/calendar',
+    label: "Calendar",
+    icon: "Calendar",
+    link: "/calendar",
   },
-  { label: 'Profile', icon: 'User', link: '/profile' },
+  { label: "Profile", icon: "User", link: "/profile" },
   {
-    label: 'Settings',
-    icon: 'Settings',
-    link: '/settings',
+    label: "Settings",
+    icon: "Settings",
+    link: "/settings",
   },
 ];
 
 const Sidebar: FC = () => {
   return (
-    <Card className='h-full w-40 flex items-center justify-between flex-wrap'>
-      <div className='w-full flex justify-center items-center'>
-        <Image src='logo' alt='Able logo' priority className='w-14' />
+    <Card className="h-full w-40 flex items-center justify-between flex-wrap">
+      <div className="w-full flex justify-center items-center">
+        <Image src="logo" alt="Able logo" priority className="w-14" />
       </div>
       {links.map((link, index) => (
         <SidebarLink key={index} link={link} />

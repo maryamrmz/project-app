@@ -1,11 +1,11 @@
-import Button from './index';
+import Button from "./index";
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Button> = {
   component: Button,
   args: {
-    children: 'Button',
+    children: "Button",
   },
 };
 export default meta;
@@ -14,36 +14,36 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
-    intent: 'primary',
+    intent: "primary",
   },
 };
 
 export const Secondary: Story = {
   args: {
-    intent: 'secondary',
+    intent: "secondary",
   },
 };
 
 export const Text: Story = {
   args: {
-    intent: 'text',
+    intent: "text",
   },
 };
 
 export const Large: Story = {
   args: {
-    size: 'large',
+    size: "large",
   },
 };
 
 export const Medium: Story = {
   args: {
-    size: 'medium',
+    size: "medium",
   },
 };
 
 export const Small: Story = {
   args: {
-    size: 'small',
+    size: "small",
   },
 };
