@@ -48,6 +48,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/bcrypt": "^5.0.0",
+    "@types/cookie": "^0.5.1",
     "@types/jest": "^29.5.1",
     "css-loader": "^6.7.4",
     "eslint-config-prettier": "^8.8.0",
