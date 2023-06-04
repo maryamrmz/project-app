@@ -1,6 +1,6 @@
 # Project App
 
-This repository contains the code for the Project App, a web application developed by [https://github.com/maryamrmz][Maryam Rmz]. The Project App is designed to help users manage and track their projects effectively.
+This repository contains the code for the web application Project App. This app is designed to help users manage and track their projects effectively.
 
 ## Features
 
@@ -75,4 +75,4 @@ If you want to contribute to the Project App, please follow these guidelines:
 
 ### Contact
 
-If you have any questions or suggestions regarding the Project App, feel free to contact the author, Maryam Rmz, at maryam.rpour@gmail.com.
+If you have any questions or suggestions regarding the Project App, feel free to contact me at maryam.rpour@gmail.com.
