@@ -1,6 +1,6 @@
 # Project App
 
-This repository contains the code for the Project App, a web application developed by Maryam Rmz. The Project App is designed to help users manage and track their projects effectively.
+This repository contains the code for the web application Project App. This app is designed to help users manage and track their projects effectively.
 
 ## Features
 
@@ -47,7 +47,7 @@ SECRET_KEY=your_secret_key
 5. Start the application:
 
 ```bash
-pnpm dev || pnpm run dev
+pnpm run dev
 ```
 
 6. Open your web browser and visit `http://localhost:3000` to access the application.
